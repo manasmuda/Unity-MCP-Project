@@ -1,0 +1,6 @@
+mcp>=1.0
+qdrant-client>=1.7
+sentence-transformers>=2.2
+fastembed>=0.2
+pyyaml>=6.0
+unitypy>=1.10

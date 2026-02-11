@@ -13,7 +13,11 @@ A local MCP server that gives Claude deep contextual understanding of Unity proj
 
 ```
 Unity-MCP-Project/
-|-- CLAUDE.md                  # This file - project intro and conventions
+|-- CLAUDE.md                  # This file - project conventions
+|-- README.md                  # Setup and usage guide
+|-- requirements.txt           # Python dependencies
+|-- docker-compose.yml         # Qdrant container config
+|-- .gitignore
 |-- docs/                      # All project documentation
 |   |-- architecture/          # System architecture and high-level design
 |   |   +-- ARCHITECTURE.md    # Full architecture doc with tech stack, diagrams, research
@@ -25,7 +29,8 @@ Unity-MCP-Project/
 |   +-- reference/             # Quick-reference guides for external tools and SDKs
 |       |-- UNITY_DATA_TOOLS.md  # UnityDataTools CLI command reference
 |       +-- MCP_SDK.md           # MCP SDK setup and connection reference
-+-- src/                       # Source code (to be created)
++-- src/
+    +-- unity_mcp_rag/         # Main Python package
 ```
 
 ## Docs Folder Organization
@@ -54,7 +59,9 @@ All documentation lives under `docs/` in topic-based subfolders:
 
 ## Development
 
-- Python server code will live in `src/`
-- Qdrant runs locally via Docker (see `docs/setup/DEPLOYMENT.md`)
+- Python server code lives in `src/unity_mcp_rag/`
+- Virtual environment: `.venv/` (Python 3.12+)
+- Qdrant: in-memory for dev, Docker for production (see `docs/setup/DEPLOYMENT.md`)
 - UnityDataTools requires .NET 9.0 SDK (see `docs/reference/UNITY_DATA_TOOLS.md`)
+- Full setup instructions: `README.md`
 - Full architecture details: `docs/architecture/ARCHITECTURE.md`

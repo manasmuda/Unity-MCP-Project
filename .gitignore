@@ -30,3 +30,11 @@ UnityDataTools/
 
 # SQLite databases generated during ingest
 *.db
+
+# Model cache (sentence-transformers / huggingface)
+models/
+*.onnx
+*.bin
+
+# Logs
+*.log
